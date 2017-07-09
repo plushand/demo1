@@ -62,6 +62,19 @@ public class User {
 		return "User [userId=" + userId + ", password=" + password + ", name=" + name + ", email=" + email + "]";
 	}
 
+	public boolean matchPassword(String newPassword){
+		if (newPassword == null){
+			return false;
+		}
+		return newPassword.equals(password);
+	}
+	public boolean matchId(Long newId){
+		if (newId == null){
+			return false;
+		}
+		return newId.equals(newId);
+	}
+	
 	public void update(User newUser) {
 		// TODO Auto-generated method stub
 		this.password = newUser.password;
